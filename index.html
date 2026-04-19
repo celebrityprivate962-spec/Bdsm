@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanctuary | Education & Community Platform</title>
+    <title>Black Rose Community | Education & Community Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -160,6 +160,12 @@
             animation: fadeInUp 1s ease-out;
         }
 
+        .hero .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
@@ -229,36 +235,57 @@
             color: var(--text-muted);
         }
 
-        .about-features {
+        /* BDSM Section */
+        .bdsm-container {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bdsm-definition {
+            margin-bottom: 2rem;
+        }
+
+        .bdsm-acronym {
             display: grid;
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        .acronym-item {
+            background: rgba(10, 10, 15, 0.5);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-violet);
         }
 
-        .feature-icon {
-            width: 40px;
-            height: 40px;
+        .acronym-title {
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .misconception-note {
             background: rgba(138, 43, 226, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-violet);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 3px solid var(--accent-gold);
         }
 
-        /* Understanding Section */
-        .understanding-grid {
+        /* Principles Section */
+        .principles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .understanding-card {
+        .principle-card {
             background: var(--card-bg);
             padding: 2rem;
             border-radius: 15px;
@@ -267,48 +294,21 @@
             transition: var(--transition);
         }
 
-        .understanding-card:hover {
+        .principle-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-violet);
             box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
         }
 
-        .understanding-card h3 {
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-
-        /* Values Section */
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-card {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: var(--card-bg);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(138, 43, 226, 0.1);
-            transition: var(--transition);
-        }
-
-        .value-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-blue);
-        }
-
-        .value-icon {
+        .principle-icon {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: var(--accent-gold);
         }
 
-        .value-card h3 {
-            margin-bottom: 1rem;
+        .principle-card h3 {
             color: var(--accent-gold);
+            margin-bottom: 1rem;
         }
 
         /* Features Section */
@@ -389,24 +389,32 @@
             color: var(--text-muted);
         }
 
-        /* Closing Section */
-        .closing {
-            text-align: center;
-            background: linear-gradient(135deg, var(--darker-bg), var(--accent-purple));
-            padding: 6rem 0;
-            margin: 4rem 0;
-            border-radius: 20px;
-        }
-
-        .closing h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .closing p {
+        /* Contact Section */
+        .contact-container {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(138, 43, 226, 0.1);
             max-width: 600px;
-            margin: 0 auto 2rem;
-            color: var(--text-muted);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .contact-label {
+            display: block;
+            color: var(--accent-gold);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
         }
 
         /* Footer */
@@ -524,12 +532,12 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <div class="logo">Sanctuary</div>
+            <div class="logo">Black Rose</div>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#understanding">Understanding</a></li>
-                    <li><a href="#values">Values</a></li>
+                    <li><a href="#bdsm">What is BDSM?</a></li>
+                    <li><a href="#principles">Principles</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#community">Community</a></li>
                 </ul>
@@ -542,8 +550,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="logo">Black Rose</div>
                 <h1>A Safe Space to Learn, Connect, and Explore</h1>
-                <p>Join our community focused on education, consent, and respectful exploration of diverse relationship dynamics. We prioritize safety, communication, and mutual respect.</p>
+                <p>A respectful, inclusive community focused on education, communication, and trust.</p>
                 <div class="hero-buttons">
                     <a href="#" class="cta-button">Join Community</a>
                     <a href="#about" class="cta-button" style="background: transparent; border: 1px solid var(--accent-violet);">Learn More</a>
@@ -556,32 +565,15 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Our Community</h2>
-                <p>A platform dedicated to education, open dialogue, and fostering understanding around alternative relationship structures and personal boundaries.</p>
+                <h2>About Black Rose Community</h2>
+                <p>A safe, inclusive, and respectful space for individuals interested in learning about relationship dynamics, communication, and personal boundaries.</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Educational Foundation</h3>
-                    <p>Our community provides comprehensive resources to help individuals understand various relationship dynamics, communication strategies, and personal boundary setting.</p>
-                    <p>We emphasize the importance of informed consent, clear communication, and mutual respect in all interactions.</p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>Educational Resources</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>Expert-Led Workshops</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>Peer Support Networks</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>Safety Protocols</span>
-                        </div>
-                    </div>
+                    <h3>Our Mission</h3>
+                    <p>At Black Rose Community, we believe in the importance of education, communication, and mutual respect in all relationships. Our platform provides a welcoming environment for individuals to learn, connect, and grow.</p>
+                    <p>We foster understanding and provide resources for those exploring alternative relationship structures and personal boundaries. Our community emphasizes informed participation and ethical practices.</p>
+                    <p>Whether you're new to these concepts or seeking to deepen your understanding, you'll find a supportive network of like-minded individuals committed to personal growth and respectful interaction.</p>
                 </div>
                 <div class="about-visual">
                     <!-- Abstract geometric shapes would go here -->
@@ -590,57 +582,62 @@
         </div>
     </section>
 
-    <!-- Understanding Section -->
-    <section id="understanding">
+    <!-- BDSM Educational Section -->
+    <section id="bdsm">
         <div class="container">
             <div class="section-title">
-                <h2>Understanding the Culture</h2>
-                <p>Education is fundamental to healthy relationships. We provide resources to understand concepts, roles, and practices within alternative relationship dynamics.</p>
+                <h2>What is BDSM?</h2>
+                <p>An educational overview of consensual practices and relationship dynamics</p>
             </div>
-            <div class="understanding-grid">
-                <div class="understanding-card animate-on-scroll">
-                    <h3>Relationship Dynamics</h3>
-                    <p>Explore different models of relationships, from polyamory to power exchange dynamics, with an emphasis on consensual and ethical practices.</p>
+            <div class="bdsm-container">
+                <div class="bdsm-definition">
+                    <p>BDSM is an umbrella term that covers a range of consensual practices and relationship dynamics involving power exchange, control, and sensation. The acronym stands for:</p>
                 </div>
-                <div class="understanding-card animate-on-scroll">
-                    <h3>Communication Tools</h3>
-                    <p>Learn effective communication techniques for expressing needs, negotiating boundaries, and maintaining healthy relationships.</p>
+                
+                <div class="bdsm-acronym">
+                    <div class="acronym-item">
+                        <div class="acronym-title">Bondage & Discipline (B&D)</div>
+                        <p>Physical restraint (such as ropes or cuffs) and structured rules or discipline</p>
+                    </div>
+                    <div class="acronym-item">
+                        <div class="acronym-title">Dominance & Submission (D/s)</div>
+                        <p>A dynamic where one person takes a guiding or controlling role while the other consents to follow</p>
+                    </div>
+                    <div class="acronym-item">
+                        <div class="acronym-title">Sadism & Masochism (S&M)</div>
+                        <p>The experience of giving or receiving controlled, intense sensations</p>
+                    </div>
                 </div>
-                <div class="understanding-card animate-on-scroll">
-                    <h3>Personal Boundaries</h3>
-                    <p>Understand the importance of setting and respecting personal boundaries in all types of relationships and interactions.</p>
+                
+                <div class="misconception-note">
+                    <p><strong>Important Note:</strong> Contrary to common misconceptions, this community emphasizes trust, mutual respect, and informed participation between adults. All activities are based on enthusiastic consent and clear communication.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section id="values">
+    <!-- Principles Section -->
+    <section id="principles">
         <div class="container">
             <div class="section-title">
-                <h2>Our Core Values</h2>
-                <p>These principles guide every aspect of our community and ensure a safe, respectful environment for all members.</p>
+                <h2>Core Principles</h2>
+                <p>These values guide every interaction within our community</p>
             </div>
-            <div class="values-grid">
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🔒</div>
+            <div class="principles-grid">
+                <div class="principle-card animate-on-scroll">
+                    <div class="principle-icon">🔒</div>
                     <h3>Consent</h3>
-                    <p>All activities require clear, enthusiastic, and ongoing consent. We promote understanding of consent as an active, continuous process.</p>
+                    <p>All interactions are agreed upon beforehand. Consent must be enthusiastic, informed, and ongoing. Participants have the right to withdraw consent at any time.</p>
                 </div>
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🛡️</div>
+                <div class="principle-card animate-on-scroll">
+                    <div class="principle-icon">💬</div>
+                    <h3>Communication</h3>
+                    <p>Clear discussion of boundaries, expectations, and limits is essential. Open dialogue helps prevent misunderstandings and ensures everyone feels comfortable.</p>
+                </div>
+                <div class="principle-card animate-on-scroll">
+                    <div class="principle-icon">🛡️</div>
                     <h3>Safety</h3>
-                    <p>We prioritize physical, emotional, and psychological safety through education, awareness, and established protocols.</p>
-                </div>
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🤝</div>
-                    <h3>Respect</h3>
-                    <p>We honor individual choices, boundaries, and identities. Everyone deserves to be treated with dignity and respect.</p>
-                </div>
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">🔐</div>
-                    <h3>Privacy</h3>
-                    <p>We maintain strict confidentiality and provide secure spaces where members can explore safely without judgment.</p>
+                    <p>Responsible practices, often summarized as "Safe, Sane, and Consensual (SSC)" or "Risk-Aware Consensual Kink (RACK)", ensure physical and emotional well-being.</p>
                 </div>
             </div>
         </div>
@@ -651,7 +648,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Community Features</h2>
-                <p>Comprehensive tools and resources designed to foster learning, connection, and growth within our community.</p>
+                <p>Comprehensive tools and resources designed to foster learning, connection, and growth</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card animate-on-scroll">
@@ -671,8 +668,8 @@
                 </div>
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">✉️</div>
-                    <h3>Secure Connections</h3>
-                    <p>Private messaging system with privacy controls to connect with like-minded individuals safely.</p>
+                    <h3>Private Messaging</h3>
+                    <p>Secure messaging system with privacy controls to connect with like-minded individuals safely.</p>
                 </div>
             </div>
         </div>
@@ -723,12 +720,29 @@
         </div>
     </section>
 
-    <!-- Closing Section -->
-    <section class="closing">
+    <!-- Contact Section -->
+    <section id="contact">
         <div class="container">
-            <h2>Building Trust Through Communication</h2>
-            <p>Our community is founded on the principles of trust, open communication, and mutual respect. These values guide every interaction and help create meaningful connections.</p>
-            <a href="#" class="cta-button">Join Our Community</a>
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Reach out to join our community or learn more about our resources</p>
+            </div>
+            <div class="contact-container">
+                <h3>Black Rose Community</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span>+1 (510) 254-0771</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Address:</span>
+                        <span>The Crucible (412 V St NE, Washington, DC 20002)</span>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <a href="#" class="cta-button">Get in Touch</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -737,7 +751,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>Sanctuary</h3>
+                    <h3>Black Rose</h3>
                     <p>A safe, educational community focused on consent, respect, and understanding in alternative relationship dynamics.</p>
                     <div class="social-icons">
                         <a href="#" class="social-icon">f</a>
@@ -752,7 +766,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#features">Features</a></li>
-                        <li><a href="#">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -768,14 +782,13 @@
                     <h3>Legal</h3>
                     <ul class="footer-links">
                         <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Community Guidelines</a></li>
-                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 Sanctuary Community. All rights reserved. Designed with respect and care.</p>
+                <p>&copy; 2026 Black Rose Community. All rights reserved. Designed with respect and care.</p>
             </div>
         </div>
     </footer>
